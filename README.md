@@ -1,19 +1,22 @@
-
 # processFKer
 
-- Supports x86 and x64 (Compiling depending the targets)
-- Supports x64 exceptions (SEH) (only /EHa and /EHc)
-- Release & Debug
-- Removes PE Header and some sections (Configurable)
-- Configurable DllMain params (default DLL_PROCESS_ATTACH)
-- Add sections protections (Configurable)
+一个简单易用的 Manual Map 注入工具。
 
-## Usage
+## 编译
 
-- Injector_path.exe dll_path [process_name]
+使用 CMake 编译：
+```cmd
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release
+```
 
-## Devs
+## 使用方法
 
-- Add **DISABLE_OUTPUT** definition if you want to disable injector.cpp output
-- main.cpp is just an example but powerfull
-- Hello World dlls added from https://github.com/carterjones/hello-world-dll for easy testing
+在命令行下执行：
+```cmd
+Injector-x64.exe <dll_path> [process_name]
+```
+- `<dll_path>`: 你要注入的 DLL 的绝对或相对路径
+- `[process_name]`: （可选）目标进程的名称（例如：`csgo.exe`）。如果想之后再配置也可以不在命令行指定。
