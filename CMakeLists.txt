@@ -24,16 +24,16 @@ endif()
 # Create executable based on current architecture
 if(CMAKE_SIZEOF_VOID_P EQUAL 4)
     # x86 build
-    add_executable(Injector-x86 ${SOURCES} ${HEADERS})
-    set_target_properties(Injector-x86 PROPERTIES
-        OUTPUT_NAME "Injector-x86"
+    add_executable(FKer-x86 ${SOURCES} ${HEADERS})
+    set_target_properties(FKer-x86 PROPERTIES
+        OUTPUT_NAME "FKer"
         WIN32_EXECUTABLE FALSE
     )
 else()
     # x64 build
-    add_executable(Injector-x64 ${SOURCES} ${HEADERS})
-    set_target_properties(Injector-x64 PROPERTIES
-        OUTPUT_NAME "Injector-x64"
+    add_executable(FKer-x64 ${SOURCES} ${HEADERS})
+    set_target_properties(FKer-x64 PROPERTIES
+        OUTPUT_NAME "FKer"
         WIN32_EXECUTABLE FALSE
     )
 endif()
