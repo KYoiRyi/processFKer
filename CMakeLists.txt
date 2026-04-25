@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.16)
-project(ManualMapInjector CXX)
+project(processFKer CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Source files
 set(SOURCES
-    "Manual Map Injector/injector.cpp"
-    "Manual Map Injector/main.cpp"
+    "processFKer/injector.cpp"
+    "processFKer/main.cpp"
 )
 
 set(HEADERS
-    "Manual Map Injector/injector.h"
+    "processFKer/injector.h"
 )
 
 # Disable BufferSecurityCheck to match original VS project
